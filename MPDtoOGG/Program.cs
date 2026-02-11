@@ -134,7 +134,6 @@ class Program
         {
             try
             {
-                @out ??= "out"; // Apply default if null
                 var outDir = Path.Combine(@out, $"AUD_STREAMID_{pid}");
                 var api = RestService.For<ICdnApi>("https://cdn.qstv.on.epicgames.com/");
                 var handler = new MPEGDashHandler(pid, outDir, api);
